@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navLink{
+
+}
+.navBarMain{
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap:20px;
+    font-size: 1.5rem;
+    color: black;
+    background-color: antiquewhite;
+}
+.navBarMain a{
+    margin-left: 1%;
+    font-weight: bolder;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+.navBarMain a:hover{
+    color: blue;
+}
