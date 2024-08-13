@@ -5,14 +5,16 @@
     display: flex;
     flex-direction: row;
     padding: 2%;
+    margin: 2%;
 }
 .cartImg{
-    width: 15%;
-    height: 15%px;
+    width: 10%;
+    height: 5%;
 }
 .cartInternal{
-    background: #e7c2c2;
+    /* background: #e7c2c2; */
     margin-top: 10%;
+    word-wrap: break-word;
     font-size: 1.2rem;
     height: 100%;
     width: 100%;
@@ -20,4 +22,10 @@
     align-items: center;
     display: flex;
     gap:5%
+}
+
+.removeCart{
+    font-size: 1.2rem;
+    border: 2px solid #997474;
+    padding: 1%;
 }

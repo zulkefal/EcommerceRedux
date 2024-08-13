@@ -1,9 +1,14 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import './Cart.css'
-const Cart = () => {
-    const cartItems= useSelector((state)=>state.cart.products)
+import { removefromCart } from '../slice/CartSlice'
 
+const Cart = () => {
+  const dispatch= useDispatch();
+    const cartItems= useSelector((state)=>state.cart.products)
+  const handleRemove=(id)=>{
+    dispatch(removefromCart(id))
+  }
   return (
 <div>
     <h3>Cart Page</h3>
@@ -14,7 +19,7 @@ const Cart = () => {
             <div className='cartInternal'>
             <h4>{item.title}</h4>
             <h4>{item.price}$/-</h4>
-            <button>Remove Cart</button>
+            <button className='removeCart' onClick={()=>handleRemove(item.id)}>Remove Cart</button>
             </div>
         </div>
       ))}

@@ -40,6 +40,7 @@ export function fetchProducts(){
             dispatch(setStatus(STATUSES.SUCCEEDED));
         }
         catch(error){
+            console.log(error);
             dispatch(setStatus(STATUSES.FAILED));
         }
     }
